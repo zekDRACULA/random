@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:random/screens/Analytics.dart';
 import 'package:random/screens/Appointments.dart';
+import 'package:random/screens/Constants.dart';
 import 'package:random/screens/LeadDetails.dart';
 
 class Dashboard extends StatelessWidget {
 
-  final List drawerOptions = ["Dashboard", "Analytics", "Appointments", "Lead Details"];
    Dashboard({super.key});
 
   @override
@@ -26,6 +26,8 @@ class Dashboard extends StatelessWidget {
   }
 }
 
+
+// MARK: class for showing sidebar options
 class drawerOptionView extends StatelessWidget {
 
   final String optionName;
@@ -41,7 +43,7 @@ class drawerOptionView extends StatelessWidget {
           onTap:(){
             Navigator.pop(context);
             switch(optionName){
-              case "Dashboard" : 
+              case "Dashboard" :
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => Dashboard()),
                 );
@@ -64,11 +66,6 @@ class drawerOptionView extends StatelessWidget {
                   MaterialPageRoute(builder: (context) => LeadDetails())
                 );
                 break;
-
-              default:
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => Dashboard())
-                );
             }
           }
     )
