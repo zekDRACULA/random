@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:random/screens/AppointmentFormView.dart';
 import 'package:random/screens/Appointments.dart';
 import 'package:random/screens/LeadFormView.dart';
 
@@ -85,7 +86,7 @@ class _ShowCardState extends State<ShowCard> {
       case 'Appointments':
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => Appointments()), // Example navigation
+          MaterialPageRoute(builder: (context) => AppointmentFormView()), // Example navigation
         );
         break;
       default:
