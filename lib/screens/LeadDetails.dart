@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:random/screens/Constants.dart';
 
 import 'Dashboard.dart';
+import 'DrawerOptionView.dart';
 
 
 class LeadDetails extends StatelessWidget {
@@ -18,7 +19,7 @@ class LeadDetails extends StatelessWidget {
         child: ListView.builder(
             itemCount: drawerOptions.length,
             itemBuilder: (context, index){
-              return drawerOptionView(optionName: drawerOptions[index],);
+              return DrawerOptionView(optionName: drawerOptions[index],);
             }),
       ),
     );

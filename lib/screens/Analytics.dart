@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:random/screens/Constants.dart';
 import 'package:fl_chart/fl_chart.dart';
+import 'package:random/screens/DrawerOptionView.dart';
 import 'Dashboard.dart';
 
 class Analytics extends StatelessWidget {
@@ -18,7 +19,7 @@ class Analytics extends StatelessWidget {
         child: ListView.builder(
             itemCount: drawerOptions.length,
             itemBuilder: (context, index){
-              return drawerOptionView(optionName: drawerOptions[index],);
+              return DrawerOptionView(optionName: drawerOptions[index],);
             }),
       ),
       body: SingleChildScrollView(
@@ -126,7 +127,6 @@ class RMSGraph extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -134,10 +134,6 @@ class RMSGraph extends StatelessWidget {
           children: [
             Text(
               'Product Market Share',
-              style: TextStyle(
-                fontSize: 14,
-                color: Colors.white,
-              ),
             ),
             SizedBox(height: 20),
             Container(
@@ -167,21 +163,18 @@ class RMSGraph extends StatelessWidget {
         color: Colors.blue,
         title: '${rms.carShare.toStringAsFixed(0)}%',
         radius: 100,
-        titleStyle: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
       ),
       PieChartSectionData(
         value: rms.bikeShare,
         color: Colors.green,
         title: '${rms.bikeShare.toStringAsFixed(0)}%',
         radius: 100,
-        titleStyle: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
       ),
       PieChartSectionData(
         value: rms.watchShare,
         color: Colors.orange,
         title: '${rms.watchShare.toStringAsFixed(0)}%',
         radius: 100,
-        titleStyle: TextStyle(color: Colors.white, fontSize: 16, fontWeight: FontWeight.bold),
       ),
     ];
   }
