@@ -74,6 +74,10 @@ class AppointmentFormView extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 view.addAppointment();
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => AppointmentView()),
+                );
               },
               child: Text('Add Appointment'),
             ),
@@ -89,6 +93,9 @@ class AppointmentView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+          title: Text('Appointments'),
+      ),
       body: view.appointmentList.isEmpty
           ? Center(child: Text('No Appointments'))
           : ListView.builder(

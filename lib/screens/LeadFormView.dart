@@ -57,6 +57,9 @@ class LeadDetailView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Lead Details'),
+      ),
       body: view.leadsList.isEmpty
           ? Center(child: Text('No Leads'))
           : ListView.builder(
@@ -172,6 +175,10 @@ class LeadFormView extends StatelessWidget {
             ElevatedButton(
               onPressed: () {
                 view.addLead();
+                Navigator.pushReplacement(
+                  context,
+                  MaterialPageRoute(builder: (context) => LeadDetailView()),
+                );
               },
               child: Text('Add'),
             ),
