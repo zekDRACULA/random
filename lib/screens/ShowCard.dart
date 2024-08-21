@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:random/screens/Appointments.dart';
+import 'package:random/screens/LeadFormView.dart';
 
-import 'LeadDetails.dart';
 
 class ShowCard extends StatefulWidget {
   @override
@@ -79,7 +79,7 @@ class _ShowCardState extends State<ShowCard> {
       case 'Leads':
         Navigator.push(
           context,
-          MaterialPageRoute(builder: (context) => LeadDetails()), // Example navigation
+          MaterialPageRoute(builder: (context) => LeadFormView()), // Example navigation
         );
         break;
       case 'Appointments':

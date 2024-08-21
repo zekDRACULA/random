@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:random/screens/Analytics.dart';
 import 'package:random/screens/Appointments.dart';
-import 'package:random/screens/LeadDetails.dart';
 import 'package:random/screens/Dashboard.dart';
+import 'package:random/screens/LeadFormView.dart';
 
 class DrawerOptionView extends StatelessWidget {
   final String optionName;
@@ -39,7 +39,7 @@ class DrawerOptionView extends StatelessWidget {
             case "Lead Details":
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => LeadDetails()),
+                MaterialPageRoute(builder: (context) => LeadDetailView()),
               );
               break;
             default:

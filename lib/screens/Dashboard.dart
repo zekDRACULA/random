@@ -3,7 +3,6 @@ import 'package:random/screens/Analytics.dart';
 import 'package:random/screens/Appointments.dart';
 import 'package:random/screens/Constants.dart';
 import 'package:random/screens/DrawerOptionView.dart';
-import 'package:random/screens/LeadDetails.dart';
 import 'package:random/screens/ShowCard.dart'; // Import the ShowCard widget
 
 class Dashboard extends StatelessWidget {
