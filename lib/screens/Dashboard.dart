@@ -26,6 +26,9 @@ class Dashboard extends StatelessWidget {
   }
 }
 
+// MARK: class for showing rectangles to add Leads
+
+
 
 // MARK: class for showing sidebar options
 class drawerOptionView extends StatelessWidget {
